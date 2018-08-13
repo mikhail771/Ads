@@ -1,0 +1,16 @@
+ad_ad:
+        path:     /
+        defaults: { _controller: "AdAdBundle:Page:index" }
+        requirements:
+             methods:  GET
+
+
+ad_create:
+    path:   /create
+    defaults: { _controller: "AdAdBundle:Page:create" }
+    requirements:
+         methods:  GET
+
+login:
+    path:     /login
+    defaults: { _controller: AdAdBundle:Auth:auth}

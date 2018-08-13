@@ -1,0 +1,11 @@
+ad_ad_homepage:
+    path:     /
+    defaults: { _controller: AdAdBundle:Default:index }
+
+ad_create:
+    path:     /ad_create
+    defaults: { _controller: AdAdBundle:Page:create}
+
+login:
+    path:     /login
+    defaults: { _controller: AdAdBundle:Auth:auth}

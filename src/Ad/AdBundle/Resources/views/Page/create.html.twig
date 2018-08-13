@@ -1,0 +1,20 @@
+{% extends 'AdAdBundle::layout.html.twig' %}
+
+{% block title %}Create{% endblock%}
+
+{% block body %}
+    <header>
+        <h1>Creating Ad</h1>
+    </header>
+
+
+    {{ form_start(formAd, { 'action': path('ad_create'), 'method': 'POST', 'attr': {'class': 'createAd'} }) }}
+    {{ form_errors(formAd) }}
+
+    {{ form_row(formAd.title) }}
+    {{ form_row(formAd.description) }}
+    {{ form_row(formAd.authorName) }}
+    {{ form_rest(formAd) }}
+
+
+{% endblock %}

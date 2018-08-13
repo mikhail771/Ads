@@ -1,0 +1,62 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <meta http-equiv="Content-Type" content="text/html"; charset=utf-8" />
+    <title>{% block title %}ADS{% endblock %} - ADS</title>
+    <!--[if lt IE 9]>
+    <script src="http://html5shim.googlecode.com/svn/trunk/html5.js"></script>
+    <![endif]-->
+    {% block stylesheets %}
+        <link href='http://fonts.googleapis.com/css?family=Irish+Grover' rel='stylesheet' type='text/css'>
+        <link href='https://fonts.googleapis.com/css?family=Fjalla+One|Roboto' rel='stylesheet' type='text/css'>
+        <link href="{{ asset('css/screen.css') }}" type="text/css" rel="stylesheet" />
+    {% endblock %}
+    <link rel="shortcut icon" href="{{ asset('favicon.ico') }}" />
+</head>
+<body>
+
+<section id="wrapper">
+    <header id="header">
+        <div class="top">
+            {% block navigation %}
+                <nav>
+                    <ul class="navigation">
+
+                        <li><a href="{{ path('ad_ad') }}">Home</a></li>
+                        <li><a href="{{ path('ad_create') }}">Create Ad</a></li>
+
+                    </ul>
+                </nav>
+            {% endblock %}
+        </div>
+
+        <hgroup>
+            <h2>{% block blog_title %}<a href="{{ path('ad_ad') }}">ADS</a>{% endblock %}</h2>
+            <h3>{% block blog_tagline %}<a href=" http://giraffesoftware.com">Created for GIRAFFE</a>{% endblock %}</h3>
+        </hgroup>
+    </header>
+
+    <section class="main-col">
+
+        {% block body %}
+            <header>
+                <a href="#"><h2>Enter Username and Password</h2></a></li>
+            </header>
+
+        {% endblock %}
+
+    </section>
+    <aside class="Ads">
+        {% block sidebar %}{% endblock %}
+    </aside>
+
+    <div id="footer">
+        {% block footer %}
+            We have the best Ads!
+        {% endblock %}
+    </div>
+</section>
+
+{% block javascripts %}{% endblock %}
+</body>
+</html>

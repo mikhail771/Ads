@@ -1,0 +1,22 @@
+{% extends 'AdAdBundle::layout.html.twig' %}
+
+{% block title %}LogIn{% endblock%}
+
+{% block body %}
+  <header>
+    <h1>Login</h1>
+  </header>
+
+  <p>Want to login ADS?</p>
+
+    {{ form_start(form, { 'action': path('ad_ad'), 'method': 'POST', 'attr': {'class': 'login'} }) }}
+    {{ form_errors(form) }}
+
+    {{ form_row(form.username) }}
+    {{ form_row(form.password) }}
+
+
+    {{ form_rest(form) }}
+
+
+{% endblock %}
